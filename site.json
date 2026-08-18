@@ -1,6 +1,6 @@
 {
   "name": "valhallabridge",
-  "origin": "https://valhallabridge.pages.dev",
+  "origin": "https://valhallabridge.com",
   "cardPath": "/p/{slug}/",
   "imageName": "card.png",
   "reserved": [

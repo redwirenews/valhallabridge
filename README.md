@@ -2,7 +2,7 @@
 
 Static host for meme bridge pages. Each card is a black redirect that opens the X composer and serves its image as a large Twitter / Open Graph card.
 
-Live origin (Cloudflare Pages): `https://valhallabridge.pages.dev`
+Live origin: `https://valhallabridge.com`
 
 ## Layout
 
@@ -18,7 +18,7 @@ templates/card.html   ← page template
 scripts/new_card.py   ← the only writer the GUI should call
 ```
 
-Public URL: `https://valhallabridge.pages.dev/p/<slug>/`
+Public URL: `https://valhallabridge.com/p/<slug>/`
 
 `/` and unknown paths stay black. There is no gallery and no sitemap — card crawlers are allowed, everything else is told to stay out.
 
@@ -41,8 +41,8 @@ Wrangler is not logged in on this machine, so the GitHub repo is the source of t
 
 1. [Cloudflare Pages](https://dash.cloudflare.com/?to=/:account/pages) → **Create** → **Connect to Git**
 2. Repo: `valhallabridge`. Framework: **None**. Build command: empty. Output directory: `/`
-3. Project name: `valhallabridge` so the hostname stays `valhallabridge.pages.dev`
-4. After the first deploy, a custom domain can replace the origin in `site.json` (then re-run `new_card.py --force` on existing cards if you need absolute OG URLs rewritten)
+3. Project name: `valhallabridge`
+4. **Custom domains** → add `valhallabridge.com` (the domain is already on Cloudflare DNS). Keep `www` as a redirect if you want.
 
 ## Scale
 
