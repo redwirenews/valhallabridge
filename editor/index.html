@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <title>Quiz card</title>
+  <link rel="stylesheet" href="editor.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="bar-top">
+      <div class="brand">Quiz card</div>
+      <button type="button" class="export" id="export">
+        <span class="export-full">Export PNG</span>
+        <span class="export-short">Export</span>
+      </button>
+    </div>
+    <div class="bar-tools">
+      <div class="group" role="group" aria-label="Number of choices">
+        <button type="button" class="seg" data-count="1">1</button>
+        <button type="button" class="seg" data-count="2">2</button>
+        <button type="button" class="seg is-on" data-count="3">3</button>
+        <button type="button" class="seg" data-count="4">4</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="stage" id="stage">
+    <div class="scaler" id="scaler">
+      <article class="card" id="card" aria-label="Meme quiz card">
+        <div class="panels" id="panels"></div>
+
+        <div class="poll" id="poll" role="group" aria-label="Poll"></div>
+      </article>
+    </div>
+  </main>
+
+  <p class="help">One image per option. Export saves a PNG to this device — nothing is uploaded.</p>
+
+  <script src="editor.js"></script>
+</body>
+</html>

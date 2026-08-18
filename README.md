@@ -4,49 +4,17 @@ Static host for meme bridge pages. Each card is a black redirect that opens the 
 
 Live origin: `https://valhallabridge.com`
 
-## Layout
+## Public paths
 
-Built to hold thousands of cards without a build step.
+- `/` — empty black page
+- `/editor/` — quiz-card maker. Exports a PNG on this device. Nothing is uploaded.
+- `/p/<slug>/` — a published card
 
-```
-p/<slug>/index.html   ← liminal bridge + baked OG tags
-p/<slug>/card.png     ← share image
-p/<slug>/meta.json    ← slug, tweet text, size, created
-catalog.json          ← append-only index the editor will read
-site.json             ← origin + reserved slugs
-templates/card.html   ← page template
-scripts/new_card.py   ← the only writer the GUI should call
-```
-
-Public URL: `https://valhallabridge.com/p/<slug>/`
-
-`/` and unknown paths stay black. There is no gallery and no sitemap — card crawlers are allowed, everything else is told to stay out.
-
-## Add a card
-
-```bash
-python3 scripts/new_card.py \
-  --slug mario-party \
-  --image ../meme.png \
-  --text "I stand with the #MarioParty"
-```
-
-Prints the public URL. Refuses a slug that already exists unless you pass `--force`.
-
-Later the editor **Publish** button will: write via this script → `git add` → `git commit` → `git push`. Cloudflare Pages mirrors `main`.
+There is no public write API and no gallery.
 
 ## Connect Cloudflare Pages
-
-Wrangler is not logged in on this machine, so the GitHub repo is the source of truth until you attach it:
 
 1. [Cloudflare Pages](https://dash.cloudflare.com/?to=/:account/pages) → **Create** → **Connect to Git**
 2. Repo: `valhallabridge`. Framework: **None**. Build command: empty. Output directory: `/`
 3. Project name: `valhallabridge`
-4. **Custom domains** → add `valhallabridge.com` (the domain is already on Cloudflare DNS). Keep `www` as a redirect if you want.
-
-## Scale
-
-- One folder per card. A few thousand siblings under `p/` is fine.
-- `catalog.json` is the lookup table so the GUI does not have to walk the tree.
-- Card images are cached immutable at the edge. HTML is cached for a minute.
-- When the repo gets heavy, track `p/**/card.*` with Git LFS. Do not add a client-side catalog render — crawlers must see OG tags in static HTML.
+4. **Custom domains** → add `valhallabridge.com`
