@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
+  <title></title>
+  <link rel="canonical" href="https://valhallabridge.pages.dev/p/mario-party/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="I stand with the #MarioParty">
+  <meta name="twitter:description" content="I stand with the #MarioParty">
+  <meta name="twitter:image" content="https://valhallabridge.pages.dev/p/mario-party/card.png">
+  <meta name="twitter:image:alt" content="Three-panel meme: tiny-brain Democratic Party, tiny-brain Republican Party, huge-brain Mario Party">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://valhallabridge.pages.dev/p/mario-party/">
+  <meta property="og:title" content="I stand with the #MarioParty">
+  <meta property="og:description" content="I stand with the #MarioParty">
+  <meta property="og:image" content="https://valhallabridge.pages.dev/p/mario-party/card.png">
+  <meta property="og:image:width" content="2400">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="Three-panel meme: tiny-brain Democratic Party, tiny-brain Republican Party, huge-brain Mario Party">
+
+  <style>
+    html, body {
+      margin: 0;
+      background: #000;
+      color: #000;
+      min-height: 100%;
+    }
+    a { color: #111; }
+  </style>
+  <script>
+    (function () {
+      var bots = /Twitterbot|facebookexternalhit|LinkedInBot|Slackbot|Discordbot|WhatsApp|TelegramBot/i;
+      if (bots.test(navigator.userAgent || "")) return;
+
+      var page = location.href.split("#")[0];
+      var text = "I stand with the #MarioParty";
+      location.replace(
+        "https://x.com/intent/tweet?text=" +
+          encodeURIComponent(text) +
+          "&url=" +
+          encodeURIComponent(page)
+      );
+    })();
+  </script>
+</head>
+<body>
+  <noscript>
+    <a href="https://x.com/intent/tweet?text=I%20stand%20with%20the%20%23MarioParty">I stand with the #MarioParty</a>
+  </noscript>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "valhallabridge",
+  "origin": "https://valhallabridge.pages.dev",
+  "cardPath": "/p/{slug}/",
+  "imageName": "card.png",
+  "reserved": [
+    "p",
+    "cards",
+    "assets",
+    "catalog",
+    "static",
+    "editor",
+    "admin",
+    "api",
+    "www",
+    "index",
+    "404",
+    "favicon",
+    "robots",
+    "sitemap",
+    "site",
+    "templates",
+    "scripts"
+  ]
+}

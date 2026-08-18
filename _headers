@@ -1,0 +1,21 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+
+/p/*/card.png
+  Cache-Control: public, max-age=31536000, immutable
+
+/p/*/card.jpg
+  Cache-Control: public, max-age=31536000, immutable
+
+/p/*/card.webp
+  Cache-Control: public, max-age=31536000, immutable
+
+/p/*/index.html
+  Cache-Control: public, max-age=60
+
+/catalog.json
+  Cache-Control: public, max-age=30
+
+/
+  Cache-Control: public, max-age=60
