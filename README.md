@@ -7,10 +7,9 @@ Live origin: `https://valhallabridge.com`
 ## Public paths
 
 - `/` — empty black page
-- `/editor/` — quiz-card maker. Exports a PNG on this device. Nothing is uploaded.
 - `/p/<slug>/` — a published card
 
-There is no public write API and no gallery.
+There is no public maker, no write API, and no gallery. Cards are added from the local deploy app.
 
 ## Connect Cloudflare Pages
 

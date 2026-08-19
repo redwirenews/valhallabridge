@@ -17,14 +17,5 @@
 /catalog.json
   Cache-Control: public, max-age=30
 
-/editor/fonts/*
-  Cache-Control: public, max-age=31536000, immutable
-
-/editor/demo/*
-  Cache-Control: public, max-age=86400
-
-/editor/
-  Cache-Control: public, max-age=60
-
 /
   Cache-Control: public, max-age=60
