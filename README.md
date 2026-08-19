@@ -6,7 +6,7 @@ Live origin: `https://valhallabridge.com`
 
 ## Public paths
 
-- `/` — empty black page
+- `/` — list of cards (blue links on black). Each link opens that card, which fills the X composer.
 - `/p/<slug>/` — a published card
 
 There is no public maker, no write API, and no gallery. Cards are added from the local deploy app.
