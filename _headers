@@ -17,5 +17,8 @@
 /catalog.json
   Cache-Control: public, max-age=30
 
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
 /
-  Cache-Control: public, max-age=60
+  Cache-Control: public, max-age=0, must-revalidate
